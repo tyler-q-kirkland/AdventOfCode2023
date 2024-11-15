@@ -8,6 +8,9 @@ public section.
   class-methods DAY1
     exporting
       !OUTPUT type INT8 .
+  class-methods DAY2
+    exporting
+      !OUTPUT type INT8 .
 protected section.
 private section.
 ENDCLASS.
@@ -24,7 +27,9 @@ CLASS ZADVENT_TYLER_2023 IMPLEMENTATION.
           second_int    TYPE string,
           combined_ints TYPE TABLE OF int4.
 
-    SELECT string FROM zadvent_ty_day1 INTO TABLE @DATA(data).
+    SELECT string FROM zadvent_2023_tyl
+      where day_number = 1
+      INTO TABLE @DATA(data).
 
     LOOP AT data INTO string.
 
@@ -67,6 +72,21 @@ CLASS ZADVENT_TYLER_2023 IMPLEMENTATION.
 
     output = REDUCE #( INIT val = 0
                             FOR row IN combined_ints NEXT val = val + row ).
+
+
+  ENDMETHOD.
+
+
+  METHOD DAY2.
+"This code is for day 2 of Advent of Code 2023!
+    DATA: string TYPE string.
+
+    SELECT string FROM zadvent_2023_tyl
+      where day_number = 2
+      INTO TABLE @DATA(data).
+      "test
+
+
 
 
   ENDMETHOD.
