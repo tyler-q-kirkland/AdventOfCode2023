@@ -17,7 +17,7 @@ ENDCLASS.
 CLASS ZADVENT_TYLER_2023 IMPLEMENTATION.
 
 
-  METHOD day1
+  METHOD day1.
 "This code is for day 1 of Advent of Code 2023!
     DATA: string TYPE string,
           first_int     TYPE string,
