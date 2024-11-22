@@ -22,7 +22,9 @@ SELECTION-SCREEN END OF BLOCK details.
 SELECTION-SCREEN BEGIN OF BLOCK dayselection WITH FRAME TITLE TEXT-s02.
   PARAMETERS : day1a RADIOBUTTON GROUP day DEFAULT 'X',
                day1b RADIOBUTTON GROUP day,
-               day2  RADIOBUTTON GROUP day.
+               day2  RADIOBUTTON GROUP day,
+               day3a RADIOBUTTON GROUP day,
+               day3b RADIOBUTTON GROUP day.
 SELECTION-SCREEN END OF BLOCK dayselection.
 
 SELECTION-SCREEN BEGIN OF BLOCK file.
@@ -80,6 +82,24 @@ START-OF-SELECTION.
       output2 = output2
   ).
     day_text = TEXT-d03.
+
+    ELSEIF day3a = 'X'.
+    zcl_advent_tyler_2023=>day3a(
+    EXPORTING
+      input  = puzzle_input
+    IMPORTING
+      output = output
+  ).
+    day_text = TEXT-d04.
+
+    ELSEIF day3b = 'X'.
+    zcl_advent_tyler_2023=>day3b(
+    EXPORTING
+      input  = puzzle_input
+    IMPORTING
+      output = output
+  ).
+    day_text = TEXT-d05.
 
   ENDIF.
 
