@@ -42,6 +42,8 @@ AT SELECTION-SCREEN ON VALUE-REQUEST FOR file.
     READ TABLE files INDEX 1 INTO file.
   ENDIF.
 
+  "I am testing this at this point
+
 START-OF-SELECTION.
 
   cl_gui_frontend_services=>gui_upload(
