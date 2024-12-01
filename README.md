@@ -1,4 +1,4 @@
 # AdventOfCode2023
-A repository for storing Tyler's 2023 Advent of Code ABAP Solutions.
+A repository for storing Tyler's Advent of Code ABAP Solutions.
 
-Located in package ZADVENT->ZADVENT2023TYLER.
+Located in package ZADVENT->ZADVENTTYLER.
