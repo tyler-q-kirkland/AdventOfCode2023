@@ -42,5 +42,7 @@ CLASS ZCL_ADVENT_TYLER_2024 IMPLEMENTATION.
       output2 = output2 + ( left_value * count ).
     ENDLOOP.
 
+"Cool comment here
+
   ENDMETHOD.
 ENDCLASS.
